@@ -1,0 +1,1 @@
+project('omdw', 'vala', 'c')
