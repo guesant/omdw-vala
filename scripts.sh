@@ -17,7 +17,7 @@ function s:start() {
 }
 
 function s:format() {
-  if ! command -v COMMAND &> /dev/null
+  if ! command -v uncrustify &> /dev/null
   then
     echo "uncrustify command not found - skipping staged files format"
   else 
