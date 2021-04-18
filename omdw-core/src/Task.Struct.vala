@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 namespace OMDW.Core.Task {
 
 public struct Struct {
