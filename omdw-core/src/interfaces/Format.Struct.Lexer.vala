@@ -10,7 +10,7 @@ private Format.Mode get_mode_from_object(Json.Object obj) {
   else return Format.Mode.BOTH;
 }
 
-public static Struct fromFFmpegObject(Json.Object obj) {
+public static Struct from_ffmpeg_object(Json.Object obj) {
   var format = Struct();
 
   format.mode = get_mode_from_object(obj);
