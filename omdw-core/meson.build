@@ -5,17 +5,9 @@ core_dependencies = [
 # END DEPENDENCIES 
 
 # START SOURCES
-
-core_sources = files('setup.vala')
-
-
-core_sources += files(
-'src/interfaces/Task.Struct.Lexer.vala',
-'src/interfaces/Task.Struct.vala',
-)
-
-subdir('src/helpers')
-
+core_sources = []
+core_sources += files('setup.vala')
+subdir('src')
 # END SOURCES 
 
 libcore_dep = declare_dependency(
