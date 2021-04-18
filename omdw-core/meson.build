@@ -1,6 +1,7 @@
 # START DEPENDENCIES 
 core_dependencies = [
   glib_dep,
+  json_dep,
 ]
 # END DEPENDENCIES 
 
