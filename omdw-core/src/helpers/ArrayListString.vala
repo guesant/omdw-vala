@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 namespace OMDW.Core.Utils.ArrayList.String {
 
 public Gee.ArrayList<string> _fromVector(string[] data) {

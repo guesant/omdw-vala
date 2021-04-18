@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 namespace OMDW.Core.Utils.ArrayList.Utils.Diff {
 
 public struct Struct<T> {

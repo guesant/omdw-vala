@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 namespace OMDW.Core.Utils.ArrayList.Generic {
 
 public Gee.ArrayList<T> _<T>() {
