@@ -1,11 +1,16 @@
 # START DEPENDENCIES 
 core_dependencies = [
+  glib_dep,
 ]
 # END DEPENDENCIES 
 
 # START SOURCES
 
 core_sources = files('setup.vala')
+
+core_sources += files(
+'src/Task.Status.vala',
+)
 
 # END SOURCES 
 
