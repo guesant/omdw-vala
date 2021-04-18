@@ -3,6 +3,7 @@ project('omdw', 'vala', 'c')
 gnome = import('gnome')
 
 # START DEPENDENCIES
+gee_dep = dependency('gee-0.8')
 json_dep = dependency('json-glib-1.0')
 
 gio_dep = dependency('gio-2.0')

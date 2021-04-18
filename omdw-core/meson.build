@@ -1,5 +1,6 @@
 # START DEPENDENCIES 
 core_dependencies = [
+  gee_dep,
   glib_dep,
   json_dep,
 ]
