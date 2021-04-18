@@ -1,6 +1,7 @@
 core_utils_sources = []
 
 core_utils_sources += files(
+  'ArrayList.Diff.vala',
   'ArrayListString.vala',
   'ArrayList.vala',
 )
