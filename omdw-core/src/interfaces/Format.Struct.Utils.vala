@@ -33,10 +33,13 @@ public Json.Object simplify(Json.Object obj) {
     "fragment_base_url",
     "downloader_options",
   };
-  foreach (var key in excludeFromFormat) {
-    obj.remove_member(key);
-  }
+  foreach (var key in excludeFromFormat) obj.remove_member(key);
   return obj;
+}
+
+public Json.Array arr_simplify(Json.Array formats) {
+  foreach(var format in formats.get_elements()) simplify(format.get_object());
+  return formats;
 }
 
 }
