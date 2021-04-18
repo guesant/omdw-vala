@@ -15,6 +15,8 @@ core_sources += files(
 'src/Task.Status.vala',
 )
 
+subdir('src/utils')
+
 # END SOURCES 
 
 libcore_dep = declare_dependency(
