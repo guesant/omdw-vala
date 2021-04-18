@@ -14,7 +14,7 @@ core_sources += files(
 'src/interfaces/Task.Struct.vala',
 )
 
-subdir('src/utils')
+subdir('src/helpers')
 
 # END SOURCES 
 

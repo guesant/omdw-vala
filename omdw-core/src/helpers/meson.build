@@ -1,7 +1,7 @@
 core_utils_sources = []
 
 core_utils_sources += files(
-  '_DeclareServices.vala',
+  'DeclareServices.vala',
   'ProcessSpawnService.vala',
 )
 
