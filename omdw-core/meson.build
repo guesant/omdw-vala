@@ -8,11 +8,10 @@ core_dependencies = [
 
 core_sources = files('setup.vala')
 
+
 core_sources += files(
-'src/Task.Lexer.deserialize.vala',
-'src/Task.Lexer.serialize.vala',
+'src/Task.Lexer.vala',
 'src/Task.Struct.vala',
-'src/Task.Status.vala',
 )
 
 subdir('src/utils')
