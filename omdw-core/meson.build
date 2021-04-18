@@ -10,8 +10,8 @@ core_sources = files('setup.vala')
 
 
 core_sources += files(
-'src/Task.Lexer.vala',
-'src/Task.Struct.vala',
+'src/interfaces/Task.Struct.Lexer.vala',
+'src/interfaces/Task.Struct.vala',
 )
 
 subdir('src/utils')
