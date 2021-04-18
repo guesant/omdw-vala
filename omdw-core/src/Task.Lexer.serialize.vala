@@ -12,7 +12,7 @@ public Json.Node serialize(Struct taskStruct){
   builder.add_string_value(taskStruct.id);
 
   builder.set_member_name("status");
-  builder.add_int_value(Task.Status.to_int(taskStruct.status));
+  builder.add_int_value(taskStruct.status.as_int());
 
   builder.set_member_name("website_url");
   builder.add_string_value(taskStruct.website_url);

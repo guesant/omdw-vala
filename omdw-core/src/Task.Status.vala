@@ -4,7 +4,13 @@ namespace OMDW.Core.Task {
 
 namespace Status {
 
-public enum Struct { ACTIVE=0, STOPPED=1, DONE=2 }
+public enum Struct {
+  ACTIVE=0, STOPPED=1, DONE=2;
+
+  public int as_int() {
+    return to_int(this);
+  }
+}
 
 public int to_int(Struct status) {
   switch(status) {
