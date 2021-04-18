@@ -1,3 +1,11 @@
+function s:start() {
+  ./builddir/$1/$2
+}
+
+function s:build() {
+  meson compile -C builddir;
+}
+
 function s:setup() {
   rm -rf builddir;
   meson setup builddir;
@@ -6,14 +14,6 @@ function s:setup() {
 function s:build-start() {
   clear;
   s:build && clear && s:start $1 $2;
-}
-
-function s:build() {
-  meson compile -C builddir;
-}
-
-function s:start() {
-  ./builddir/$1/$2
 }
 
 function s:format() {
