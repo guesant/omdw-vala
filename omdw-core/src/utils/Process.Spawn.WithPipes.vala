@@ -15,7 +15,16 @@ public delegate void Struct(out Pid child_pid, Options.Struct options, out int? 
 public static Struct _(string commandBase) {
   return (out child_pid, options, out std_input, out std_output, out std_eror) => {
            options.args.insert(0, "%s".printf(commandBase));
-           Process.spawn_async_with_pipes(options.workingDir, options.args.steal(), options.spawn_env, SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD, null, out child_pid, out std_input, out std_output, out std_eror);
+           Process.spawn_async_with_pipes(
+             options.workingDir,
+             options.args.steal(),
+             options.spawn_env,
+             SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
+             null,
+             out child_pid,
+             out std_input,
+             out std_output,
+             out std_eror);
   };
 }
 

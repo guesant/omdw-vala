@@ -12,8 +12,7 @@ public static Struct _(string commandBase) {
              build_spawn_args(commandBase, args),
              out _stdout,
              out _stderr,
-             out _exit_code
-             );
+             out _exit_code);
   };
 }
 
