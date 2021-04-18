@@ -9,6 +9,7 @@ core_dependencies = [
 core_sources = files('setup.vala')
 
 core_sources += files(
+'src/Task.Struct.vala',
 'src/Task.Status.vala',
 )
 
