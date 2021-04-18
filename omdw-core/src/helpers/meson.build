@@ -1,6 +1,10 @@
 core_utils_sources = []
 
 core_utils_sources += files(
+  'ArrayList.vala',
+)
+
+core_utils_sources += files(
   'DeclareServices.vala',
   'ProcessSpawnService.vala',
 )
