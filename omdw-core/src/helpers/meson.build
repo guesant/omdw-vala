@@ -1,6 +1,10 @@
 core_utils_sources = []
 
 core_utils_sources += files(
+  'Time.FormatSeconds.vala',
+)
+
+core_utils_sources += files(
   'ArrayList.Diff.vala',
   'ArrayListString.vala',
   'ArrayList.vala',
