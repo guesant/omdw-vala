@@ -5,19 +5,24 @@ using OMDW.Core.xProcess.Spawn;
 namespace OMDW.Core.xProcess {
 
 public class SpawnService {
-  public Sync.Struct spawn;
-  public WithPipes.Struct spawnWithPipes;
+  private string command;
 
-  public SpawnService(string? command) {
-    if(command != null) {
-      this.setupCommand(command);
-    }
+  public void setCommand(string command) {
+    this.command = command;
   }
 
-  public void setupCommand(string command) {
-    this.spawn = Sync._(command);
-    this.spawnWithPipes = WithPipes._(command);
+  public Sync.Struct spawn() {
+    return Sync._(this.command);
   }
+
+  public WithPipes.Struct spawn_with_pipes() {
+    return WithPipes._(this.command);
+  }
+
+  public SpawnService(string command) {
+    this.setCommand(command);
+  }
+
 }
 
 }
