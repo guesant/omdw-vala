@@ -1,14 +1,14 @@
-function s:start() {
-  ./builddir/$1/$2
+function s:setup() {
+  rm -rf builddir;
+  meson setup builddir;
 }
 
 function s:build() {
   meson compile -C builddir;
 }
 
-function s:setup() {
-  rm -rf builddir;
-  meson setup builddir;
+function s:start() {
+  ./builddir/$1/$2
 }
 
 function s:build-start() {
