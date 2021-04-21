@@ -14,9 +14,6 @@ cd omdw
 
 ```sh
 . scripts.sh
-```
-
-```sh
 s:setup && s:build
 ```
 
