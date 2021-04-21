@@ -1,6 +1,7 @@
 core_utils_sources = []
 
 core_utils_sources += files(
+  'utils/MakeFileCopyFromURI.vala',
   'Time.FormatSeconds.vala',
 )
 
