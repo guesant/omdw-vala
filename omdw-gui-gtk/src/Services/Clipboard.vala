@@ -1,7 +1,7 @@
 namespace OMDW.Gui.Services {
 
 public interface ClipboardSignals {
-  public signal void on_clipboard_avaliable_text_chage(bool is_avaliable);
+  public signal void on_clipboard_avaliable_text_change(bool is_avaliable);
 }
 
 public class Clipboard : ClipboardSignals, Object {
@@ -15,7 +15,7 @@ public class Clipboard : ClipboardSignals, Object {
     while (true) {
       var avaliable = cb.wait_is_text_available();
       if(prev == null || avaliable != prev) {
-        this.on_clipboard_avaliable_text_chage(avaliable);
+        this.on_clipboard_avaliable_text_change(avaliable);
       }
       prev = avaliable;
       Thread.usleep(1 * 1000000);

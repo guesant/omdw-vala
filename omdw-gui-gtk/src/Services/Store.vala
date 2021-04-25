@@ -6,8 +6,8 @@ public class OMDW.Gui.Store : Object {
     var clipboard = new Services.Clipboard();
     var event_bus = new Gui.Services.EventBus();
 
-    clipboard.on_clipboard_avaliable_text_chage.connect((v) => {
-      event_bus.on_clipboard_avaliable_text_chage(v);
+    clipboard.on_clipboard_avaliable_text_change.connect((v) => {
+      event_bus.on_clipboard_avaliable_text_change(v);
     });
 
     this.setup_store(event_bus, clipboard);
