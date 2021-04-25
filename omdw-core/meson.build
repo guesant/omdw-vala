@@ -8,7 +8,6 @@ core_dependencies = [
 
 # START SOURCES
 core_sources = []
-core_sources += files('setup.vala')
 subdir('src')
 # END SOURCES 
 
