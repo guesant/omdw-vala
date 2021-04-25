@@ -5,11 +5,15 @@ public interface ClipboardSignals {
 }
 
 public class Clipboard : ClipboardSignals, Object {
+  public Gtk.Clipboard clipboard {
+    get { return Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD); }
+  }
+
   public void clipboard_watch() {
     bool? prev = null;
-    var clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD);
+    var cb = this.clipboard;
     while (true) {
-      var avaliable = clipboard.wait_is_text_available();
+      var avaliable = cb.wait_is_text_available();
       if(prev == null || avaliable != prev) {
         this.on_clipboard_avaliable_text_chage(avaliable);
       }
