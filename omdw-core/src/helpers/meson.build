@@ -12,7 +12,7 @@ core_utils_sources += files(
 )
 
 core_utils_sources += files(
-  'DeclareServices.vala',
+  'CoreServices.vala',
   'ProcessSpawnService.vala',
 )
 
