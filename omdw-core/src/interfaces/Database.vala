@@ -8,11 +8,11 @@ public interface DatabaseSignals {
   public signal void on_task_status_changed(string id);
 }
 
-public interface Database : Object, Signals {
-  public abstract string getRawData();
-  public abstract Json.Parser getData();
-  public abstract void setData(Json.Node data);
-  public abstract void setRawData(string data);
+public interface Database : DatabaseSignals {
+  public abstract string get_raw_data();
+  public abstract Json.Parser get_json_data();
+  public abstract void set_raw_data(string data);
+  public abstract void set_json_data(Json.Node data);
 }
 
 }
