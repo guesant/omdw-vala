@@ -1,6 +1,6 @@
 namespace OMDW.Core.Database {
 
-public interface Signals {
+public interface DatabaseSignals {
   public signal void on_update();
   public signal void on_tasks_change();
   public signal void on_task_added(string id);
