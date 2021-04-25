@@ -20,5 +20,5 @@ s:setup && s:build
 > Check out all the scripts [here](../scripts.sh).
 
 ```sh
-s:build-start omdw-gui app
+s:build-start omdw-gui-gtk omdw-gui-gtk
 ```
