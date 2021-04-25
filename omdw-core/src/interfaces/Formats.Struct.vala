@@ -23,6 +23,7 @@ public class Struct {
       switch (format.mode) {
       case Format.Mode.ONLY_AUDIO: fmts.dashAudioFormats.append(format); break;
       case Format.Mode.ONLY_VIDEO: fmts.dashVideoFormats.append(format); break;
+      default: break;
       }
     }
 
