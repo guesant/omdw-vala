@@ -17,6 +17,7 @@ gresources = gnome.compile_resources(
 # SOURCES
 gui_gtk_sources = files('main.vala')
 gui_gtk_sources += files('src/Application.vala')
+subdir('src/Services')
 # END SOURCES 
 
 executable(

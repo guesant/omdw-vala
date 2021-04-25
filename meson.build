@@ -6,6 +6,7 @@ gio_dep = dependency('gio-2.0')
 gtk_dep = dependency('gtk+-3.0')
 json_dep = dependency('json-glib-1.0')
 gmodule_dep = dependency('gmodule-2.0')
+glib_dep = dependency('glib-2.0', version: '>= 2.64')
 # END DEPENDENCIES
 
 gnome = import('gnome')
