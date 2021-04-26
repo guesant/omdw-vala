@@ -1,4 +1,5 @@
 core_sources += files(
+  'AppRepository.Local.vala',
   'Database.Memory.vala',
   'TaskRepository.vala',
 )
