@@ -8,7 +8,7 @@
 ### Build
 
 ```sh
-git clone https://github.com/guesant/omdw.git
+git clone https://github.com/guesant/omdw-vala.git
 cd omdw
 ```
 
