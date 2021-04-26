@@ -4,6 +4,7 @@ gui_gtk_dependencies = [
   gtk_dep,
   glib_dep,
   gmodule_dep,
+  libcore_dep,
 ]
 # END DEPENDENCIES 
 
@@ -16,9 +17,7 @@ gresources = gnome.compile_resources(
 
 # SOURCES
 gui_gtk_sources = files('main.vala')
-gui_gtk_sources += files('src/Application.vala')
-subdir('src/Helpers')
-subdir('src/Services')
+subdir('src')
 # END SOURCES 
 
 executable(
