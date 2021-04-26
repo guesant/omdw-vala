@@ -3,7 +3,7 @@ namespace OMDW.Core.Database {
 public interface DatabaseSignals {
   public signal void on_update();
   public signal void on_tasks_change();
-  public signal void on_task_added(string id);
+  public signal void on_task_added(string id, Task.Struct task_struct);
   public signal void on_task_removed(string id);
   public signal void on_task_status_changed(string id);
 }
