@@ -10,7 +10,7 @@ gui_gtk_dependencies = [
 
 gresources = gnome.compile_resources(
   'project-resources',
-  'resources/omdw.gresource.xml',
+  'resources/' + meson.project_name() + '.gresource.xml',
   c_name: 'proj_res',
   source_dir: ['resources']
 )
