@@ -12,4 +12,24 @@ public class OMDW.Core.AppRepository.Local : Database.Memory, TaskRepository {
     }
     return list;
   }
+
+  public void add_task(Task.Struct task_struct) {
+    var json = this.get_json_data();
+    var root = json.get_root();
+
+    root.get_object()
+    .get_array_member("tasks")
+    .add_object_element(
+      Task.Lexer
+      .json_from_struct(task_struct)
+      .get_object()
+      );
+
+    var generator = new Json.Generator();
+    generator.set_root(root);
+    this.set_raw_data(generator.to_data(null));
+
+    this.on_task_added(task_struct.id, task_struct);
+    this.on_tasks_change();
+  }
 }
