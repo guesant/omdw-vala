@@ -1,7 +1,5 @@
-public class OMDW.Gui.Component : Object {
-  public Store store;
+public class OMDW.Gui.Component : GenericComponent {
   protected Gtk.Builder builder;
-  public weak Gtk.Application application;
   public bool dispose_widgets { get; set; default = true; }
 
   protected unowned T get_obj<T>(string name) {

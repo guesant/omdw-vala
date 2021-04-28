@@ -1,4 +1,5 @@
 gui_gtk_sources += files('Component.vala')
+gui_gtk_sources += files('GenericComponent.vala')
 gui_gtk_sources += files('Store.vala')
 gui_gtk_sources += files('EventBus.vala')
 gui_gtk_sources += files('FileSystem.vala')
