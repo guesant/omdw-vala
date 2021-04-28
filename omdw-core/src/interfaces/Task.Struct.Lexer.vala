@@ -9,7 +9,7 @@ public Struct deserialize(Json.Object obj) {
   return Task.Struct() {
            status = status,
            id = obj.get_string_member("id"),
-           website_url = obj.get_string_member("website_url"),
+           webpage_url = obj.get_string_member("webpage_url"),
            output_filename = obj.get_string_member("output_filename"),
            requested_formats = obj.get_string_member("requested_formats")
   };
@@ -25,8 +25,8 @@ public Json.Node serialize(Struct taskStruct){
   builder.set_member_name("status");
   builder.add_int_value(taskStruct.status.as_int());
 
-  builder.set_member_name("website_url");
-  builder.add_string_value(taskStruct.website_url);
+  builder.set_member_name("webpage_url");
+  builder.add_string_value(taskStruct.webpage_url);
 
   builder.set_member_name("output_filename");
   builder.add_string_value(taskStruct.output_filename);

@@ -5,7 +5,7 @@ namespace OMDW.Core.Task {
 public struct Struct {
   public string id;
   public Status status;
-  public string website_url;
+  public string webpage_url;
   public string output_filename;
   public string requested_formats;
 }
