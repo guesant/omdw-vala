@@ -1,10 +1,8 @@
 // SPDX-License-Identifier: MIT
 
-namespace OMDW.Core {
+namespace OMDW.Core.Task.Lexer {
 
-namespace Task.Lexer {
-
-public Struct deserialize(Json.Object obj) {
+public Struct struct_from_json(Json.Object obj) {
   var status = Task.status_from_int((int)obj.get_int_member("status"));
   return Task.Struct() {
            status = status,
@@ -15,7 +13,7 @@ public Struct deserialize(Json.Object obj) {
   };
 }
 
-public Json.Node serialize(Struct taskStruct){
+public Json.Node json_from_struct(Struct taskStruct){
   var builder = new Json.Builder();
   builder.begin_object();
 
@@ -36,8 +34,6 @@ public Json.Node serialize(Struct taskStruct){
 
   builder.end_object();
   return builder.get_root();
-}
-
 }
 
 }
