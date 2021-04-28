@@ -5,6 +5,12 @@ public class Dashboard : DashBoardSkeleton {
     this.store = store;
     this.application = application;
   }
+
+  public void start() {
+    base.setup();
+    this.on_request_quit.connect(window.destroy);
+    this.window.present();
+  }
 }
 
 }
