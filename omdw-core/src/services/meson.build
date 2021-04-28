@@ -4,4 +4,5 @@ core_sources += files(
   'TaskRepository.vala',
 )
 
+subdir('MediaController')
 core_sources += core_media_controller_sources
