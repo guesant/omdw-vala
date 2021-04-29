@@ -1,6 +1,7 @@
 namespace OMDW.Gui.Widgets.Partials {
 
 public class AboutMedia : OMDW.Gui.GenericComponent {
+  public Gtk.Label title;
   public Gtk.Grid container;
   public Gtk.Image thumbnail;
 
@@ -16,6 +17,12 @@ public class AboutMedia : OMDW.Gui.GenericComponent {
     thumbnail.height_request = 45;
     thumbnail.icon_name = "view-refresh";
     container.attach(thumbnail, 0, 0, 1, 2);
+
+    title = new Gtk.Label("Carregando...");
+    title.halign = Gtk.Align.START;
+    title.attributes = new Pango.AttrList();
+    title.attributes.insert(Pango.attr_weight_new(Pango.Weight.BOLD));
+    container.attach(title, 1, 0, 2, 1);
 
     container.show_all();
   }
