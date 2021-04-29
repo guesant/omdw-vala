@@ -10,10 +10,10 @@ public class InfoContainer : Object {
     container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
 
     this.icon = new Gtk.Image();
-    this.label = new Gtk.Label(null);
-
-    container.add(label);
     container.add(icon);
+
+    this.label = new Gtk.Label(null);
+    container.add(label);
   }
 
   public InfoContainer(
