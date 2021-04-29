@@ -5,6 +5,7 @@ public class AboutMedia : OMDW.Gui.GenericComponent {
   public Gtk.Grid container;
   public Gtk.Label duration;
   public Gtk.Image thumbnail;
+  public AboutMediaInfo.Skeleton? wrapper;
 
   construct {
     container = new Gtk.Grid();
@@ -32,6 +33,15 @@ public class AboutMedia : OMDW.Gui.GenericComponent {
     duration = bx_duration.label;
 
     container.show_all();
+  }
+
+  public void set_wrapper_mode (AboutMediaInfo.Mode mode) {
+    if(this.wrapper != null) { this.wrapper.container.destroy(); }
+    this.wrapper = AboutMediaInfo.get_wrapper_for_mode(mode);
+    if(this.wrapper != null) {
+      this.wrapper.parent = this;
+      this.container.attach(this.wrapper.container, 2, 1, 1, 1);
+    }
   }
 }
 
