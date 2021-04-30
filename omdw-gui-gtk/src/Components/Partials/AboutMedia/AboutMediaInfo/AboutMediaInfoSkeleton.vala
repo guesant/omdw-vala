@@ -7,4 +7,11 @@ public abstract class Skeleton : Object {
   public Gtk.Container container;
 }
 
+public static Skeleton? get_wrapper_for_mode(Mode mode) {
+  switch (mode) {
+  case Mode.OVERVIEW: return new AboutMediaInfo.Overview();
+  }
+  return null;
+}
+
 }
