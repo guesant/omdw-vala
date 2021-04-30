@@ -9,6 +9,7 @@ public abstract class Skeleton : Object {
 
 public static Skeleton? get_wrapper_for_mode(Mode mode) {
   switch (mode) {
+  case Mode.DONE: return new AboutMediaInfo.Done();
   case Mode.OVERVIEW: return new AboutMediaInfo.Overview();
   }
   return null;
