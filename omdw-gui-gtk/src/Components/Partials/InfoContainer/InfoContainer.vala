@@ -1,18 +1,14 @@
 namespace OMDW.Gui.Widgets.Partials {
 
 public class InfoContainer : Object {
-  public Gtk.Image icon;
-  public Gtk.Label label;
-
   public Gtk.Container container;
+
+  public Gtk.Image icon = new Gtk.Image();
+  public Gtk.Label label = new Gtk.Label(null);
 
   construct {
     container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
-
-    this.icon = new Gtk.Image();
     container.add(icon);
-
-    this.label = new Gtk.Label(null);
     container.add(label);
   }
 
