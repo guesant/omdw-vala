@@ -35,6 +35,27 @@ public class AboutMedia : OMDW.Gui.GenericComponent {
     container.show_all();
   }
 
+  public void set_generic_info(
+    string? title = null,
+    int64 duration = 0,
+    string? thumbnail_url = null
+    ) {
+    this.title.label = title == null ? "Carregando..." : title;
+    this.duration.label = Core.Utils.Time.format_seconds(duration);
+
+    if(thumbnail_url != null) {
+      GLib.Idle.add(() => {
+          var pixbuf = Utils.pixbuf_from_url(thumbnail_url);
+          if(pixbuf != null) {
+            this.thumbnail.set_from_pixbuf(
+              pixbuf.scale_simple(80, 45, Gdk.InterpType.BILINEAR)
+              );
+          }
+          return false;
+        });
+    }
+  }
+
   public void set_wrapper_mode (AboutMediaInfo.Mode mode) {
     if(this.wrapper != null) { this.wrapper.container.destroy(); }
     this.wrapper = AboutMediaInfo.get_wrapper_for_mode(mode);
