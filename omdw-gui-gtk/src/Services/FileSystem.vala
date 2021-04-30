@@ -11,4 +11,8 @@ public class OMDW.Gui.Utils.FileSystem {
   public static string get_temp_path(string path) {
     return Path.build_filename(Environment.get_tmp_dir(), "omdw-temp-" + path);
   }
+
+  public static string get_cache_path(string path) {
+    return Path.build_filename(Environment.get_user_cache_dir(), "omdw-cache-" + path);
+  }
 }
