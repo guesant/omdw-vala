@@ -13,7 +13,6 @@ public class Analyzing : GenericComponent {
       "Cancelar",
       Gtk.ResponseType.CANCEL
       );
-    window.set_modal(true);
     window.set_default_size(310, 140);
     window.set_application(this.application);
     window.resizable = false;
@@ -29,15 +28,14 @@ public class Analyzing : GenericComponent {
     grid.row_homogeneous = true;
     grid.column_homogeneous = true;
     grid.expand = true;
-
     var spinner = new Gtk.Spinner();
     spinner.active = true;
     grid.attach(spinner, 1, 1, 1, 1);
-
     window.get_content_area().add(grid);
     //
 
     window.show_all();
+    window.present();
     return window;
   }
 }
