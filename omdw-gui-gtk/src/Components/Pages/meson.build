@@ -1,1 +1,3 @@
-subdir('DashBoard')
+gui_gtk_sources += files(
+  'Dashboard.vala',
+)
